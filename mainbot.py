@@ -7,6 +7,7 @@ def create_api():
   access_token = os.getenv('access_token')
   access_token_secret = os.getenv('access_token_secret')
 
+
   auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
   auth.set_access_token(access_token, access_token_secret)
 
@@ -30,11 +31,10 @@ def follower_count(user):
 api = create_api()
 
 while True:
-    user = api.get_user('the_ameen_manna')
-    api.update_profile(name=f'AMEEN|{follower_count(user)} Followers')
-    print(f'Updating Twitter Name : AMEEN|{follower_count(user)} Followers')
+    user = api.get_user('HolesomeD')
+    api.update_profile(name=f'Holesome|{follower_count(user)} Doughnut')
+    print(f'Updating Twitter Name : Holesome|{follower_count(user)} Doughnut')
     print('Waiting to refresh')
     time.sleep(60)
-  
                         
           
